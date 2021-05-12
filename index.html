@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Windy Archive Images</title>
+
+    <link type="text/css" rel="stylesheet" media="all" href="css/index.css" />
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        const IMAGE_TYPE = 0; // 0:Windy
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="Container">
+        <div id="Area" class="Option">
+            <h2>地域</h2>
+            <div>
+                <label><input type="radio" name="area" value="Douhoku" />道北</label>
+                <label><input type="radio" name="area" value="Kanto" checked="checked" />関東</label>
+            </div>
+        </div>
+
+        <div id="Type" class="Option">
+            <h2>種別</h2>
+            <div>
+                <label><input type="radio" name="type" value="clouds" checked="checked" />雲</label>
+                <label><input type="radio" name="type" value="lclouds" />下層雲</label>
+                <label><input type="radio" name="type" value="rain" />雨</label>
+                <label><input type="radio" name="type" value="rh" />湿度</label>
+                <label><input type="radio" name="type" value="temp" />気温</label>
+                <label><input type="radio" name="type" value="wind" />風</label>
+            </div>
+        </div>
+
+        <div id="Date" class="Option">
+            <div id="Year">
+                <select name="year">
+				</select>
+                <p>年</p>
+            </div>
+            <div id="Month">
+                <select name="month">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+                <p>月</p>
+            </div>
+            <div id="Day">
+                <select name="day">
+				</select>
+                <p>日</p>
+            </div>
+            <div id="Hour">
+                <select name="hour">
+					<option value="0">0</option>
+					<option value="3">3</option>
+					<option value="6">6</option>
+					<option value="9">9</option>
+					<option value="12">12</option>
+					<option value="15">15</option>
+					<option value="18">18</option>
+					<option value="21">21</option>
+				</select>
+                <p>時</p>
+            </div>
+        </div>
+
+        <div id="Control" class="Option">
+            <div id="Button">
+                <p><button id="PrevButton" class="Play"></button><button id="NextButton" class="Play"></button></p>
+            </div>
+            <div id="AutoPlay">
+                <p><label><input type="checkbox" name="autoplay" value="" />自動再生</label></p>
+                <div id="Speed">
+                    <select name="speed">
+						<option value="4000">0.5</option>
+						<option value="2000" selected="selected">1</option>
+						<option value="1000">2</option>
+						<option value="500">4</option>
+						<option value="250">8</option>
+					</select>
+                    <p>倍速</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Image">
+            <p id="NoImage">NO IMAGE</p>
+            <div id="WindyImage">
+                <div></div>
+            </div>
+        </div>
+
+        <div id="Link">
+            <ul>
+                <li><a href="https://www.windy.com/ja/">Windy</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
