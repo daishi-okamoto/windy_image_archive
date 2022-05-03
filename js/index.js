@@ -310,7 +310,7 @@ $(document).ready(function() {
 
     function initDateSelect() {
         var now = new Date();
-        var hour_delta = now.getHours() % 3;
+        // var hour_delta = now.getHours() % 3;
         // if (hour_delta === 2) {
         //     hour_delta = 1;
         // } else if (hour_delta === 1) {
@@ -318,7 +318,7 @@ $(document).ready(function() {
         // } else {
         //     hour_delta = 0;
         // }
-        now.setHours(now.getHours() - hour_delta);
+        now.setHours(now.getHours());
         // console.log(hour_delta)
         const year = now.getFullYear();
         const month = now.getMonth() + 1;
